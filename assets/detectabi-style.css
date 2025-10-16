@@ -1,0 +1,229 @@
+/* === RESET E BASE === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #2c3e50;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* === HEADER === */
+h1 {
+  color: #2c3e50;
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subtitulo {
+  color: #7f8c8d;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+/* === BARRA DE PROGRESSO === */
+.progress-container { margin: 30px 0; }
+
+.progress {
+  background: #ecf0f1;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+  box-shadow: 0 2px 4px rgba(52,152,219,0.3);
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #3498db;
+  font-size: 0.95em;
+}
+
+/* === SEÇÕES === */
+.section {
+  background: #f8f9fa;
+  padding: 30px;
+  margin: 25px 0;
+  border-radius: 10px;
+  border-left: 5px solid #3498db;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.section h3 {
+  color: #2c3e50;
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.section h3 span {
+  margin-right: 12px;
+  font-size: 1.3em;
+}
+
+/* === FORMULÁRIO === */
+label {
+  display: block;
+  margin: 15px 0 8px 0;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95em;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.1);
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%232c3e50' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 40px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* === CHECKBOX GRID === */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #ecf0f1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.checkbox-item:hover {
+  border-color: #3498db;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.2);
+}
+
+.checkbox-item.checked {
+  border-color: #3498db;
+  background: #ebf5fd;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.checkbox-label {
+  font-size: 0.95em;
+  color: #2c3e50;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* === GRID DE CAMPOS === */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* === MENSAGENS === */
+.dica, .alerta, .erro, .info {
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dica {
+  background: #e8f5e9;
+  color: #27ae60;
+  border-left: 4px solid #27ae60;
+}
+.alerta {
+  background: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+.erro {
+  background: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+.info {
+  background: #e3f2fd;
+  color: #1565c0;
+  border-left: 4px solid #2196f3;
+}
+
+/* === CAMPOS DINÂMICOS === */
+.hidden { display: none; }
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  .container { padding: 20px; }
+  .grid-2, .checkbox-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 1.5em; }
+}
