@@ -1,0 +1,1 @@
+# Detectabi-Style-1.0
