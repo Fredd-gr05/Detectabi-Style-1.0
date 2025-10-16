@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detectabi Forms - Discovery 2.0</title>
+  <link rel="stylesheet" href="assets/detectabi-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Discovery Detectabi</h1>
+    <div class="subtitulo">
+      <strong>Formulário Dinâmico</strong><br>
+      Sistema inteligente que adapta as perguntas conforme suas respostas!
+    </div>
+
+    <div class="progress-container">
+      <div class="progress">
+        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+      </div>
+      <p class="progress-text" id="progressText">Progresso: 0% completado</p>
+    </div>
+
+    <!-- === Container dinâmico === -->
+    <div id="formularioContainer"></div>
+
+    <footer style="text-align:center; margin-top:2rem;">
+      <button id="btnEnviar" class="btn-enviar">Enviar Formulário</button>
+    </footer>
+  </div>
+
+  <script src="js/renderForm.js"></script>
+</body>
+</html>
