@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detectabi Forms - Discovery 2.0</title>
+  <title>Discovery Detectabi 2.0 – Formulário Inteligente</title>
+
+  <!-- Estilo padrão Detectabi -->
   <link rel="stylesheet" href="assets/detectabi-style.css">
 </head>
+
 <body>
   <div class="container">
     <h1>🔍 Discovery Detectabi</h1>
@@ -14,21 +17,31 @@
       Sistema inteligente que adapta as perguntas conforme suas respostas!
     </div>
 
+    <!-- ===== Barra de Progresso ===== -->
     <div class="progress-container">
       <div class="progress">
-        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
       </div>
       <p class="progress-text" id="progressText">Progresso: 0% completado</p>
     </div>
 
-    <!-- === Container dinâmico === -->
-    <div id="formularioContainer"></div>
+    <!-- ===== Container Dinâmico (O JS gerará todas as categorias e campos) ===== -->
+    <div id="formularioContainer">
+      <!-- Gerado automaticamente pelo renderForm.js com base no form_config.json -->
+    </div>
 
+    <!-- ===== Rodapé (botão de envio) ===== -->
     <footer style="text-align:center; margin-top:2rem;">
       <button id="btnEnviar" class="btn-enviar">Enviar Formulário</button>
     </footer>
   </div>
 
-  <script src="js/renderForm.js"></script>
+  <!-- ===== SCRIPTS PRINCIPAIS ===== -->
+
+  <!-- 1. Gerador de Formulário: lê o JSON e constrói a estrutura -->
+  < src="js/renderForm.js"></script>
+
+  <!-- 2. Lógica Detectabi: comportamentos, condicionais e progresso -->
+  <script src="js/script.js"></script>
 </body>
 </html>
